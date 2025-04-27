@@ -29,4 +29,4 @@ Coming soon to NuGet! 🚀
 For now, you can clone this repository and add `DoculaLib.csproj` to your solution.
 
 ```bash
-git clone https://github.com/your-username/DoculaLib.git
+git clone https://github.com/elaboy/DoculaLib.git
