@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoculaLib.IO", "DoculaLib.IO\DoculaLib.IO.csproj", "{0846F283-ADCD-4A14-8D4F-4D3BB43992D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoculaLib.Tests", "DoculaLib.Tests\DoculaLib.Tests.csproj", "{B525CC81-F348-4F5C-A576-59BB8E5DDF76}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoculaLib.Core", "DoculaLib.Core\DoculaLib.Core.csproj", "{0A2565AB-3EC4-473E-8682-41C4887DCB8D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoculaLib.Utilities", "DoculaLib.Utilities\DoculaLib.Utilities.csproj", "{D396A37B-405E-4697-B355-636FC4E20719}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0846F283-ADCD-4A14-8D4F-4D3BB43992D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0846F283-ADCD-4A14-8D4F-4D3BB43992D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0846F283-ADCD-4A14-8D4F-4D3BB43992D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0846F283-ADCD-4A14-8D4F-4D3BB43992D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B525CC81-F348-4F5C-A576-59BB8E5DDF76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B525CC81-F348-4F5C-A576-59BB8E5DDF76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B525CC81-F348-4F5C-A576-59BB8E5DDF76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B525CC81-F348-4F5C-A576-59BB8E5DDF76}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A2565AB-3EC4-473E-8682-41C4887DCB8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A2565AB-3EC4-473E-8682-41C4887DCB8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A2565AB-3EC4-473E-8682-41C4887DCB8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A2565AB-3EC4-473E-8682-41C4887DCB8D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D396A37B-405E-4697-B355-636FC4E20719}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D396A37B-405E-4697-B355-636FC4E20719}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D396A37B-405E-4697-B355-636FC4E20719}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D396A37B-405E-4697-B355-636FC4E20719}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
