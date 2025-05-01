@@ -30,15 +30,19 @@ jobs:
 
     - name: Clean build artifacts
       run: dotnet clean
+      working-directory: src
 
     - name: Restore dependencies
       run: dotnet restore
+      working-directory: src
 
     - name: Build
       run: dotnet build --no-restore
+      working-directory: src
 
     - name: Test with results
       run: dotnet test --no-build --verbosity normal --logger trx
+      working-directory: src
 
     - name: Publish test results
       uses: actions/upload-artifact@v4
