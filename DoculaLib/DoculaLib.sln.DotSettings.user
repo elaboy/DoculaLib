@@ -1,10 +1,4 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=25bd079d_002Dc1e8_002D4a1f_002Dad14_002Dd232e653dcaa/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Test1" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
-  &lt;TestAncestor&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::B525CC81-F348-4F5C-A576-59BB8E5DDF76::net8.0::DoculaLibTests.Tests.Test1&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::B525CC81-F348-4F5C-A576-59BB8E5DDF76::net8.0::DoculaLibTests.TokenTests.TestNameToken&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::B525CC81-F348-4F5C-A576-59BB8E5DDF76::net8.0::DoculaLibTests.TokenTests.TestNameTokenVoidArg&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::B525CC81-F348-4F5C-A576-59BB8E5DDF76::net8.0::DoculaLibTests.TokenTests.TestNameTokenNullArg&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::B525CC81-F348-4F5C-A576-59BB8E5DDF76::net8.0::DoculaLibTests.TokenTests.TestNameTokenWhitespaceArg&lt;/TestId&gt;&#xD;
-  &lt;/TestAncestor&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=25bd079d_002Dc1e8_002D4a1f_002Dad14_002Dd232e653dcaa/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Test1" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;Project Location="/home/edwin/repo/DoculaLib/DoculaLib/DoculaLib.Tests" Presentation="&amp;lt;DoculaLib.Tests&amp;gt;" /&gt;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
