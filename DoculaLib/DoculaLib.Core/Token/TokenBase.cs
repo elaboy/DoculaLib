@@ -4,6 +4,11 @@ public abstract class TokenBase : IToken
 {
     public abstract TokenType Type { get; }
     public string RawValue { get; protected set; }
+    public void Apply(ParserContext context)
+    {
+        throw new NotImplementedException();
+    }
+
     public string Value { get; protected set; }
 
     protected TokenBase(string rawValue)

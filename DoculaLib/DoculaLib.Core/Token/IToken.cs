@@ -1,6 +1,6 @@
-﻿namespace DoculaLib.Core;
+﻿namespace DoculaLib.Core.Token;
 
-public class IToken
+public interface IToken
 {
     TokenType Type { get; }
     string RawValue { get; }

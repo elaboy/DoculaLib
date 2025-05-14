@@ -1,4 +1,4 @@
-﻿namespace DoculaLib.Core;
+﻿namespace DoculaLib.Core.Token;
 
 public enum TokenType
 {
