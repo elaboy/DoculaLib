@@ -89,18 +89,12 @@ public class Tokenizer
 
     private byte[] GetXRef(BinaryReader reader)
     {
-        long endOfXRef;
-        List<byte> xRefContent = new List<byte>();
+        List<byte[]> listOfBytes = new List<byte[]>();
         
-        while (FindKeyword(reader, "trailer", out endOfXRef))
+        while (reader.PeekChar() != -1)
         {
-            if (reader.PeekChar() == -1)
-                break;
-            
-            xRefContent.AddRange(reader.ReadBytes((int)endOfXRef));    
+            byte[] buffer = new byte[20];
         }
-
-        return xRefContent.ToArray();
     }
     
     bool FindKeyword(BinaryReader reader, string keyword, out long position)
