@@ -61,6 +61,7 @@ public class Tokenizer
                             reader.BaseStream.Position = originalPosition;
                             byte[] obj = reader.ReadBytes((int)(endObjIndex - originalPosition));
                             BytesList.Add(obj);
+                            continue;
                         }
                     }
 
@@ -76,6 +77,7 @@ public class Tokenizer
                             reader.BaseStream.Position = originalPosition;
                             byte[] xref = reader.ReadBytes((int)(endXrefIndex - originalPosition));
                             BytesList.Add(xref);
+                            BytesList.Add(GetXRef(reader));
                         }
                     }
                 }
@@ -83,6 +85,46 @@ public class Tokenizer
                 int zero = 0;
             }
         }
+    }
+
+    private byte[] GetXRef(BinaryReader reader)
+    {
+        long endOfXRef;
+        List<byte> xRefContent = new List<byte>();
+        
+        while (FindKeyword(reader, "trailer", out endOfXRef))
+        {
+            if (reader.PeekChar() == -1)
+                break;
+            
+            xRefContent.AddRange(reader.ReadBytes((int)endOfXRef));    
+        }
+
+        return xRefContent.ToArray();
+    }
+    
+    bool FindKeyword(BinaryReader reader, string keyword, out long position)
+    {
+        char[] buffer = new char[keyword.Length];
+        position = 0;
+
+        while (reader.PeekChar() != -1)
+        {
+            char chr = reader.ReadChar();
+
+            for (int i = 0; i < buffer.Length - 1; i++)
+                buffer[i] = buffer[i + 1];
+
+            buffer[buffer.Length - 1] = chr;
+
+            if (new string(buffer) == keyword)
+            {
+                position = reader.BaseStream.Position - keyword.Length;
+                return true;
+            }
+        }
+
+        return false;
     }
 
     bool FoundXRef(BinaryReader reader, out long endOfXRefIndex)
@@ -112,10 +154,32 @@ public class Tokenizer
         return false;
     }
 
-    // bool FoundTrailer(BinaryReader reader, out long endOfTrailer)
-    // {
-    //     
-    // }
+    bool FoundTrailer(BinaryReader reader, out long endOfTrailer)
+    {
+        char[] buffer = new char[8];
+        endOfTrailer = 0;
+
+        while (reader.PeekChar() != -1)
+        {
+            char chr = reader.ReadChar();
+
+            for (int i = 0; i < buffer.Length - 1; i++)
+            {
+                buffer[i] = buffer[i + 1];
+            }
+            
+            buffer[buffer.Length - 1] = chr;
+
+            if (new string(buffer) == "trailer")
+            {
+                //search for trailer to update enOfXRefIndex
+                
+                endOfTrailer = reader.BaseStream.Position - 1;
+                return true;
+            }
+        }
+        return false;
+    }
 
     bool FoundEndObject(BinaryReader reader, out long endobjIndex)
     {
